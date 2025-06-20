@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bayo Awoh - IT Portfolio</title>
+  <title>PROJECT - Book Search SPA</title>
+
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RC63QyA3CGyOkVOxTtAXFz+9zBdA9Rm6fCPKAGxAWqZkYO8s3+TwbxW3zXqgmZuhfDNXQwTqIPw25Np2V4+TFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
@@ -63,17 +65,21 @@
       color: #00796b;
     }
 
-    a {
-      color: #0288d1;
-      text-decoration: none;
+    .book-card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .book-card h3 {
+      margin-top: 0;
+      color: #2e7d32;
     }
 
-    ul {
-      list-style-type: square;
+    .book-card p {
+      margin: 5px 0;
     }
 
     footer {
@@ -90,7 +96,7 @@
 <header>
   <h1>Bayo Awoh</h1>
   <p><strong>Affiliation:</strong> IT Major, Concentration in Enterprise Systems – Kennesaw State University</p>
-  
+
   <nav class="nav-links">
     <a href="project.html"><i class="fas fa-folder-open"></i> PROJECT</a>
     <a href="extra.html"><i class="fas fa-star"></i> EXTRA</a>
@@ -98,30 +104,54 @@
 </header>
 
 <div class="container">
-  <h2>Site Overview and Purpose</h2>
-  <p>This website showcases my academic work, personal growth, and learning outcomes related to IT coursework. It is a portfolio for presenting assignments, labs, and exercises completed in IT4403 - Advanced Web and Mobile Application Development.</p>
+  <h2>📚 Book Search - Milestone 1 Demo</h2>
+  <p>This section demonstrates hardcoded book data rendered on the page to fulfill Milestone 1 of the project.</p>
 
-  <h2>Course Information</h2>
-  <p><strong>Course:</strong> IT4403 - Advanced Web and Mobile Application Development<br>
-     <strong>Instructor:</strong> Dr. Zhigang Li<br>
-     <strong>Semester:</strong> Summer 2025</p>
-
-  <h2>About Me</h2>
-  <p>I am passionate about building secure, scalable web applications and cloud-based solutions. My goal is to leverage both front-end and back-end technologies to create innovative IT systems that solve real-world problems.</p>
-
-  <h2>Useful Links</h2>
-  <ul>
-    <li><a href="https://ccse.kennesaw.edu/it/" target="_blank">CCSE IT Department</a></li>
-    <li><a href="https://www.w3schools.com/html/">HTML and CSS Basics</a></li> 
-  </ul>  
-  
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:bayo.awoh@students.kennesaw.edu">bayo.awoh@students.kennesaw.edu</a></p>
+  <div id="book-list"></div>
 </div>
 
 <footer>
   &copy; 2025 Bayo Awoh | Kennesaw State University | All Rights Reserved
 </footer>
+
+<script>
+// Sample hardcoded book data
+const books = [
+  {
+    "title": "The Great Gatsby",
+    "authors": ["F. Scott Fitzgerald"],
+    "publisher": "Scribner",
+    "publishedDate": "2004-09-30"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "authors": ["Harper Lee"],
+    "publisher": "HarperCollins",
+    "publishedDate": "2006-05-23"
+  },
+  {
+    "title": "1984",
+    "authors": ["George Orwell"],
+    "publisher": "Signet Classics",
+    "publishedDate": "1950-07-01"
+  }
+];
+
+// Render books on the page
+const bookList = document.getElementById('book-list');
+
+books.forEach(book => {
+  const card = document.createElement('div');
+  card.className = 'book-card';
+  card.innerHTML = `
+    <h3>${book.title}</h3>
+    <p><strong>Author(s):</strong> ${book.authors.join(", ")}</p>
+    <p><strong>Publisher:</strong> ${book.publisher}</p>
+    <p><strong>Published:</strong> ${book.publishedDate}</p>
+  `;
+  bookList.appendChild(card);
+});
+</script>
 
 </body>
 </html>
