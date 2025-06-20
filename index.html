@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Bayo Awoh - IT Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RC63QyA3CGyOkVOxTtAXFz+9zBdA9Rm6fCPKAGxAWqZkYO8s3+TwbxW3zXqgmZuhfDNXQwTqIPw25Np2V4+TFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,16 +13,43 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #00695c;
       color: white;
       padding: 20px 40px;
       text-align: center;
     }
+
     h1 {
       margin: 0;
       font-size: 2.5em;
     }
+
+    .nav-links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      background-color: #004d40;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #00796b;
+    }
+
     .container {
       padding: 40px;
       max-width: 900px;
@@ -29,19 +58,24 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 10px;
     }
+
     h2 {
       color: #00796b;
     }
+
     a {
       color: #0288d1;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     ul {
       list-style-type: square;
     }
+
     footer {
       background-color: #004d40;
       color: white;
@@ -56,11 +90,10 @@
 <header>
   <h1>Bayo Awoh</h1>
   <p><strong>Affiliation:</strong> IT Major, Concentration in Enterprise Systems – Kennesaw State University</p>
-   <nav class="nav-links">
-    <ul>
-      <li><a href="project.html">PROJECT</a></li> | <li><a href="extra.html">EXTRA</a></li>
-      
-    </ul>
+  
+  <nav class="nav-links">
+    <a href="project.html"><i class="fas fa-folder-open"></i> PROJECT</a>
+    <a href="extra.html"><i class="fas fa-star"></i> EXTRA</a>
   </nav>
 </header>
 
@@ -83,8 +116,7 @@
   </ul>  
   
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:bayo.awoh@students.kennesaw.edu">bayo.awoh@students.kennesaw.edu</a><br>
-  </p>
+  <p>Email: <a href="mailto:bayo.awoh@students.kennesaw.edu">bayo.awoh@students.kennesaw.edu</a></p>
 </div>
 
 <footer>
