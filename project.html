@@ -2,174 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PROJECT - Book Search</title>
-
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RC63QyA3CGyOkVOxTtAXFz+9zBdA9Rm6fCPKAGxAWqZkYO8s3+TwbxW3zXqgmZuhfDNXQwTqIPw25Np2V4+TFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #00695c;
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    .nav-links {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .nav-links a {
-      background-color: #004d40;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      background-color: #00796b;
-    }
-
-    .container {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #00796b;
-    }
-
-    .book-card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-card h3 {
-      margin-top: 0;
-      color: #2e7d32;
-    }
-
-    .book-card p {
-      margin: 5px 0;
-    }
-
-    footer {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <title>Project - Book Display</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
 <header>
   <h1>Bayo Awoh</h1>
-  <p><strong>Affiliation:</strong> IT Major, Concentration in Enterprise Systems – Kennesaw State University</p>
-
+  <p><strong>Affiliation:</strong> Affiliation:</strong> IT Major, Concentration in Enterprise Systems – Kennesaw State University</p>
   <nav class="nav-links">
-    <a href="index.html">OVERVIEW</a>
+    <a href="index.html"><i class="fas fa-folder-open"></i> OVERVIEW</a>
     <a href="project.html"><i class="fas fa-folder-open"></i> PROJECT</a>
     <a href="extra.html"><i class="fas fa-star"></i> EXTRA</a>
   </nav>
 </header>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>PROJECT - Milestone 1</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #e0f7fa;
-      margin: 0;
-      padding: 20px;
-    }
-
-    header {
-      background-color: #00695c;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1, h2 {
-      color: #004d40;
-    }
-
-    .book-section {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .book-card {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 20px;
-    }
-
-    .book-card img {
-      width: 100px;
-      height: auto;
-    }
-
-    .book-info h3 {
-      margin-top: 0;
-      color: #2e7d32;
-    }
-
-    .book-info p {
-      margin: 4px 0;
-    }
-
-    footer {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-<div class="book-section">
-  <h2> Single Book Display</h2>
+<div class="container">
+  <h2>Single Book Display</h2>
   <div class="book-card">
     <img src="https://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1" alt="Book Cover">
     <div class="book-info">
@@ -180,70 +30,15 @@
       <p><a href="https://books.google.com/books?id=Wfan6L9RGgYC" target="_blank">View on Google Books</a></p>
     </div>
   </div>
-</div>
 
-<div class="book-section">
-  <h2> Book List </h2>
+  <h2>Book List</h2>
   <div id="book-list"></div>
 </div>
 
 <footer>
-  &copy; 2025 Bayo Awoh | Kennesaw State University | All Rights Reserved
+  &copy; 2025 Bayo Awoh | KSU | All Rights Reserved
 </footer>
-<script>
-// Real books data (sourced from Google Books)
-const books = [
-  {
-    title: "HTML and CSS: Design and Build Websites",
-    authors: ["Jon Duckett"],
-    publisher: "Wiley",
-    publishedDate: "2011",
-    thumbnail: "https://books.google.com/books/content?id=aGjaBTbT0o0C&printsec=frontcover&img=1&zoom=1",
-    link: "https://books.google.com/books/about/HTML_and_CSS.html?id=aGjaBTbT0o0C"
-  },
-  {
-    title: "Eloquent JavaScript",
-    authors: ["Marijn Haverbeke"],
-    publisher: "No Starch Press",
-    publishedDate: "2024",
-    thumbnail: "https://eloquentjavascript.net/img/cover.jpg",
-    link: "https://eloquentjavascript.net/"
-  },
-  {
-    title: "You Don’t Know JS",
-    authors: ["Kyle Simpson"],
-    publisher: "O'Reilly Media",
-    publishedDate: "2015",
-    thumbnail: "https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg",
-    link: "https://github.com/getify/You-Dont-Know-JS"
-  },
-  {
-    title: "The HTML and CSS Workshop",
-    authors: ["Lewis Coulson", "Brett Jephson", "Rob Larsen", "Matt Park", "Marian Zburlea"],
-    publisher: "Packt Publishing Ltd",
-    publishedDate: "2019",
-    thumbnail: "https://books.google.com/books/content?id=gVjBDwAAQBAJ&printsec=frontcover&img=1&zoom=1",
-    link: "https://play.google.com/store/books/details/The_HTML_and_CSS_Workshop?id=gVjBDwAAQBAJ"
-  }
-];
 
-// Render the books dynamically
-const container = document.getElementById("book-list");
-books.forEach(book => {
-  const div = document.createElement("div");
-  div.className = "book-card";
-  div.innerHTML = `
-    <img src="${book.thumbnail}" alt="Cover of ${book.title}">
-    <div class="book-info">
-      <h3>${book.title}</h3>
-      <p><strong>Author(s):</strong> ${book.authors.join(", ")}</p>
-      <p><strong>Publisher:</strong> ${book.publisher}</p>
-      <p><strong>Published:</strong> ${book.publishedDate}</p>
-      <p><a href="${book.link}" target="_blank">More Info</a></p>
-    </div>`;
-  container.appendChild(div);
-});
-</script>
-
+<script src="js/books.js"></script>
 </body>
 </html>
