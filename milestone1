@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project - Book Display</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
 
+<header>
+  <h1>Bayo Awoh</h1>
+  <p><strong>Affiliation:</strong> IT Major, Concentration in Enterprise Systems – Kennesaw State University</p>
+  <nav class="nav-links">
+    <a href="index.html"><i class="fas fa-folder-open"></i> OVERVIEW</a>
+    <a href="project.html"><i class="fas fa-folder-open"></i> PROJECT</a>
+    <a href="extra.html"><i class="fas fa-star"></i> EXTRA</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Single Book Display</h2>
+  <div class="book-card">
+    <img src="https://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1" alt="Book Cover">
+    <div class="book-info">
+      <h3>Learning Web Design</h3>
+      <p><strong>Author:</strong> Jennifer Niederst Robbins</p>
+      <p><strong>Publisher:</strong> O'Reilly Media</p>
+      <p><strong>Published:</strong> 2018</p>
+      <p><a href="https://books.google.com/books?id=Wfan6L9RGgYC" target="_blank">View on Google Books</a></p>
+    </div>
+  </div>
+
+  <h2>Book List</h2>
+  <div id="book-list"></div>
+</div>
+
+<footer>
+  &copy; 2025 Bayo Awoh | KSU | All Rights Reserved
+</footer>
+
+<script src="js/books.js"></script>
+</body>
+</html>
