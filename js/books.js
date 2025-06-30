@@ -33,8 +33,7 @@ const books = [
   }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const list = document.getElementById("book-list");
+ const container = document.getElementById("book-list");
 
   books.forEach(book => {
     const div = document.createElement("div");
@@ -49,6 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><a href="${book.link}" target="_blank">More Info</a></p>
       </div>
     `;
-    list.appendChild(div);
+    container.appendChild(div);
   });
 });
