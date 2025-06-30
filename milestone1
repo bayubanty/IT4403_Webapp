@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>MILESTONE 1 - Book Display</title>
+
+  <!-- CSS Styling -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- JavaScript (deferred until after DOM is ready) -->
   <script src="js/books.js" defer></script>
 </head>
 <body>
@@ -37,6 +43,12 @@
 </div>
 
 <footer>
+  &copy; 2025 Bayo Awoh | KSU | All Rights Reserved
+</footer>
+
+</body>
+</html>
+
   &copy; 2025 Bayo Awoh | KSU | All Rights Reserved
 </footer>
 
