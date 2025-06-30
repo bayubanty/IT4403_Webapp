@@ -33,27 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
     link: "https://play.google.com/store/books/details/The_HTML_and_CSS_Workshop?id=gVjBDwAAQBAJ"
   }
   ];
-
-  const container = document.getElementById("book-list");
-
-  if (!container) {
-    console.error("Could not find #book-list");
-    return;
-  }
+  const bookListDiv = document.getElementById("book-list");
 
   books.forEach(book => {
-    const div = document.createElement("div");
-    div.className = "book-card";
-    div.innerHTML = `
-      <img src="${book.thumbnail}" alt="${book.title}">
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("book-card");
+
+    bookCard.innerHTML = `
+      <img src="${book.image}" alt="${book.title} Cover">
       <div class="book-info">
         <h3>${book.title}</h3>
-        <p><strong>Author(s):</strong> ${book.authors.join(", ")}</p>
+        <p><strong>Author:</strong> ${book.author}</p>
         <p><strong>Publisher:</strong> ${book.publisher}</p>
-        <p><strong>Published:</strong> ${book.publishedDate}</p>
-        <p><a href="${book.link}" target="_blank">More Info</a></p>
+        <p><strong>Published:</strong> ${book.year}</p>
+        <p><a href="${book.link}" target="_blank">View on Google Books</a></p>
       </div>
     `;
-    container.appendChild(div);
+
+    bookListDiv.appendChild(bookCard);
   });
 });
