@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MILESTONE 2 - Book Search</title>
+  <title>MILESTONE 2 - Book Search SPA </title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="js/books.js" defer></script>
@@ -21,12 +21,18 @@
 
 <div class="container">
   <h2>Milestone 2 </h2>
+<h1>Book Search</h1>
 
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Enter book title or author..." required>
+    <button type="submit">Search</button>
+  </form>
 </div>
-
+ <div id="book-list"></div>
+  
 <footer>
   &copy; 2025 Bayo Awoh | KSU | All Rights Reserved
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
